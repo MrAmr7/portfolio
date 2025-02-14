@@ -6,7 +6,7 @@ import Photon from "../assets/cc.png";
 const Projects = () => {
   return (
     <div
-      className="h-[100vh] bg-black max-w[1200px] mx-auto p-5 py-40 z-1"
+      className="h-[100vh] bg-black max-w[1200px] mx-auto p-5 py-40 z-1 "
       id="Projects"
     >
       <div className="pb-8">

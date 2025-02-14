@@ -1,22 +1,67 @@
-import foto from"../assets/Amr.jpg"
- const Navbar = () => {
+import { Menu, X, Home, User, Star, Briefcase, Layers, Mail } from "lucide-react";
+import { useState } from "react";
+import foto from "../assets/Amr.jpg";
+
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navLinks = [
+    { name: "Home", href: "#home", icon: <Home size={20} /> },
+    { name: "About Me", href: "#About Me", icon: <User size={20} /> },
+    { name: "Skills", href: "#Skills", icon: <Star size={20} /> },
+    { name: "Experience", href: "#Ex", icon: <Briefcase size={20} /> },
+    { name: "Projects", href: "#Projects", icon: <Layers size={20} /> },
+    { name: "Contact", href: "#Contact", icon: <Mail size={20} /> },
+  ];
+
   return (
-    <header>
-    <nav className="bg-blue-800 w-5xl mx-auto  font-serif flex fixed top-0 left-0 w-full z-50 items-center justify-between h-[60xp] p-4 ">
-  <img className="rounded-md"src={foto} width={40} height={5}/>
-<ul className="space-x-10">
+    <header className="bg-blue-800 fixed w-full top-0 left-0 z-50 shadow-lg">
+      <nav className="w-full  mx-auto flex items-center justify-between p-4">
+        {/* Logo */}
+        <div className="flex items-center space-x-2">
+          <img className="rounded-full" src={foto} alt="Logo" width={40} height={40} />
+          <h1 className="text-white text-2xl font-serif">Amr's Portfolio</h1>
+        </div>
 
- <a className="text-white text-2xl    hover:text-purple-950" href="#home">Home</a>
- <a className="text-white text-2xl    hover:text-purple-950" href="#About Me">AboutMe</a>
- <a className="text-white text-2xl    hover:text-purple-950" href="#Skills">Skills</a>
- <a className="text-white text-2xl    hover:text-purple-950" href="#Ex">Ex</a>
- <a className="text-white text-2xl    hover:text-purple-950" href="#Projects">Projects</a>
-    <a className="text-white text-2xl hover:text-purple-950" href="#Contact">Contact</a>
-</ul>
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex space-x-4">
+          {navLinks.map(({ name, href, icon }) => (
+            <a
+              key={name}
+              href={href}
+              className="flex items-center gap-2 text-white text-lg font-medium hover:text-purple-300 transition"
+            >
+              {icon} {name}
+            </a>
+          ))}
+        </ul>
 
-    </nav>
+        {/* Hamburger Menu (Mobile) */}
+        <button
+          className="md:hidden text-white"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <X size={32} /> : <Menu size={32} />}
+        </button>
+      </nav>
+
+      {/* Mobile Dropdown Menu */}
+      {isOpen && (
+        <ul className="md:hidden flex flex-col items-center bg-blue-900 space-y-4 py-4">
+          {navLinks.map(({ name, href, icon }) => (
+            <a
+              key={name}
+              href={href}
+              onClick={() => setIsOpen(false)}
+              className="flex items-center gap-2 text-white text-lg hover:text-purple-300 transition"
+            >
+              {icon} {name}
+            </a>
+          ))}
+        </ul>
+      )}
     </header>
-    
-  )
-}
- export default Navbar
+  );
+};
+
+export default Navbar;
