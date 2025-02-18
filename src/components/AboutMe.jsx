@@ -3,9 +3,9 @@ const AboutMe = () => {
   return (
     <main
       id="About Me"
-      className="h-auto md:h-screen w-[100vw] bg-black pt-[8rem] z-0 flex justify-center items-center"
+      className="h-auto md:h-screen w-ful bg-black pt-[8rem] z-0 flex justify-center items-center"
     >
-      <div className="w-full h-auto md:w-[90%] mx-auto flex flex-col md:flex-row">
+      <div className="w-full h-auto md:w-[90%] md:h-full mx-auto flex flex-col md:flex-row">
         <div className="w-full md:w-[70%]  my-auto p-2 mx-2">
           <h2 className="text-4xl font-bold  mp-4 text-purple-950">
             {" "}
@@ -25,7 +25,7 @@ const AboutMe = () => {
             <br />
             What I Do:
             <br />
-            <p className="text-justify">
+            <p className="text-justify ">
               Develop full-stack applications that prioritize performance and
               usability Implement secure, scalable, and well-structured backend
               architectures Craft interactive and visually appealing UI/UX

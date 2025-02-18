@@ -3,7 +3,7 @@ import { TypeAnimation } from "react-type-animation"
 import { FaTwitter, FaWhatsapp, FaGithub, FaInstagram, FaFacebook ,FaLinkedin } from 'react-icons/fa';
 const Hero = () => {
   return (
-    <div id="home"className="girt grid-cols-2 md:grid-cols-3 gap-8 max-w[1200px] h-auto md:h-[80vh] bg-black py-12">
+    <div id="home"className="girt grid-cols-2 md:grid-cols-3 gap-8 max-w[1200px] h-auto md:h-full bg-black py-12">
       <div className="flex flex-col-reverse md:flex-row justify-center ">
         
         <div className="col-span-2 px-10 pt-10">
@@ -19,6 +19,7 @@ const Hero = () => {
               speed={10}
               repeat={Infinity} /></h1>
 
+
           <button
 
             className="px-6 py-10 float-right clear-both mt-3 bg-blue-700 text-purple-950 text-7xl font-semibold rounded-xl shadow-md hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-700 transition ease-in-out duration-300"
@@ -27,10 +28,12 @@ const Hero = () => {
           </button>
 
 
-          <p className="text-white text-3xl font-serif  my-10 p-10 clear-right text-justify"> <button className="text-4xl text-purple-900 border-purple-700 rounded-md ">Hi There!</button> <br></br> I'm Eng-Amr  <br/>
+          <p className="text-white text-2xl font-serif  my-10 p-10 clear-right text-justify"> <button className="text-4xl text-purple-900 border-purple-700 rounded-md ">Hi There!</button> <br></br> I'm Eng-Amr  <br/>
            Full-Stack Web Developer
           Passionate about building dynamic, scalable, and user-centric web applications, I specialize in both frontend and backend development. With expertise in modern technologies, I create seamless digital experiences that are efficient, responsive, and visually engaging.</p>
-
+          <a href="./cv.pdf" download={'/my_cv.pdf'}
+            className="bg-blue-800 ml-40 py-4 px-3 rounded"
+            > Download CV</a>
         </div>
 
         <img className="ml-auto rounded-xl" src={sono} width={500} height={500} />
