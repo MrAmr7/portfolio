@@ -29,7 +29,7 @@ const Navbar = () => {
             <a
               key={name}
               href={href}
-              className="flex items-center gap-2 text-white text-lg font-medium hover:text-purple-300 transition"
+              className="flex items-center gap-2 text-white text-lg font-medium hover:text-purple-900 transition"
             >
               {icon} {name}
             </a>
@@ -53,7 +53,7 @@ const Navbar = () => {
               key={name}
               href={href}
               onClick={() => setIsOpen(false)}
-              className="flex items-center gap-2 text-white text-lg hover:text-purple-300 transition"
+              className="flex items-center gap-2 text-white text-lg hover:text-purple-900 transition"
             >
               {icon} {name}
             </a>
