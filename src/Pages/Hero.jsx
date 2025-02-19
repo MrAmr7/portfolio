@@ -3,7 +3,7 @@ import { TypeAnimation } from "react-type-animation"
 import { FaTwitter, FaWhatsapp, FaGithub, FaInstagram, FaFacebook ,FaLinkedin } from 'react-icons/fa';
 const Hero = () => {
   return (
-    <div id="home"className="girt grid-cols-2 md:grid-cols-3 gap-8 max-w[1200px] h-auto md:h-full bg-black py-12">
+    <div id="home"className="girt grid-cols-2 md:grid-cols-3 gap-9 max-w[1200px] h-auto md:h-full bg-black py-12">
       <div className="flex flex-col-reverse md:flex-row justify-center ">
         
         <div className="col-span-2 px-10 pt-10">
